@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>R. Charan Kumar | Portfolio</title>
+
+  <style>
+    /* === Reset === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #ffffff;
+      --text: #222;
+      --primary: #0077ff;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.4s, color 0.4s;
+    }
+
+    /* Dark Mode */
+    .dark-mode {
+      --bg: #121212;
+      --text: #f5f5f5;
+    }
+
+    /* === Navbar === */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--primary);
+      padding: 15px 50px;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: 600;
+    }
+
+    .logo span {
+      color: yellow;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: yellow;
+    }
+
+    #theme-toggle {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* === Hero Section === */
+    #hero {
+      height: 90vh;
+      background: linear-gradient(to right, #0077ff, #00bcd4);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #hero span {
+      color: yellow;
+    }
+
+    #hero button {
+      margin-top: 20px;
+      background: yellow;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      color: #333;
+      transition: 0.3s;
+    }
+
+    #hero button:hover {
+      background: #fff;
+      transform: scale(1.05);
+    }
+
+    /* === Section Style === */
+    section {
+      padding: 80px 100px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+
+    /* === Skills & Projects === */
+    .skills-container, .project-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .skill-card, .project-card {
+      background: var(--primary);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-card:hover, .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* === Contact Section === */
+    #contact a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    #contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* === Footer === */
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    /* === Responsive === */
+    @media (max-width: 768px) {
+      section {
+        padding: 60px 30px;
+      }
+      .nav-links {
+        display: none;
+      }
+      .skills-container, .project-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <header class="navbar">
+    <h1 class="logo">Charan<span>.</span></h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle">🌙</button>
+  </header>
+
+  <!-- ===== Hero Section ===== -->
+  <section id="hero">
+    <div class="hero-content">
+      <h2>Hello, I'm <span>R. Charan Kumar</span></h2>
+      <p>B.Tech CSE Student at IIT Indore | DSA in C++ | Beginner on Codeforces</p>
+      <button id="connect-btn">Connect With Me</button>
+    </div>
+  </section>
+
+  <!-- ===== About Section ===== -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm currently pursuing a <strong>Bachelor of Technology in Computer Science and Engineering</strong> 
+      at <strong>IIT Indore</strong>.  
+      I’m passionate about problem-solving, algorithms, and competitive programming.  
+      I’ve been learning <strong>Data Structures and Algorithms (DSA) in C++</strong> and exploring the world of 
+      <strong>competitive coding</strong> on <em>Codeforces</em>.  
+      My goal is to grow into a skilled software engineer with strong fundamentals and practical knowledge.
+    </p>
+  </section>
+
+  <!-- ===== Skills Section ===== -->
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-container">
+      <div class="skill-card">C++</div>
+      <div class="skill-card">Data Structures</div>
+      <div class="skill-card">Algorithms</div>
+      <div class="skill-card">HTML</div>
+      <div class="skill-card">CSS</div>
+      <div class="skill-card">JavaScript</div>
+    </div>
+  </section>
+
+  <!-- ===== Projects Section ===== -->
+  <section id="projects">
+    <h2>Projects & Activities</h2>
+    <div class="project-container">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>
+          A personal portfolio built using HTML, CSS, and JavaScript to showcase my skills, academic journey, and coding interests.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>DSA Practice Repository</h3>
+        <p>
+          Solved 100+ DSA problems on arrays, linked lists, stacks, and trees as part of my continuous learning in C++.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Competitive Programming (Codeforces)</h3>
+        <p>
+          Participating in beginner-level contests on Codeforces to improve my problem-solving and algorithmic thinking.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p><strong>Email:</strong> <a href="mailto:charanr@email.com">charanr@email.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/rcharankumar" target="_blank">linkedin.com/in/rcharankumar</a></p>
+    <p><strong>Codeforces:</strong> <a href="https://codeforces.com/profile/" target="_blank">My Codeforces Profile</a></p>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>© 2025 R. Charan Kumar | B.Tech CSE | IIT Indore</p>
+  </footer>
+
+  <!-- ===== JavaScript ===== -->
+  <script>
+    // Dark/Light Mode Toggle
+    const themeToggle = document.getElementById("theme-toggle");
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    });
+
+    // Connect Button
+    document.getElementById("connect-btn").addEventListener("click", () => {
+      alert("Thanks for visiting my portfolio! Let's connect via email 📧");
+    });
+  </script>
+</body>
+</html>
